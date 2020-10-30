@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, instal-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Верстка сайтов на Bootstrap</title>
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!--Шапка сайта -->
+ <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <a href="#" class="navbar-brand"><img src="img/logo.jpg"></a>
+    <button class="navbar-toggler"type="button"
+    data-toggle="collapse"
+    data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse"
+    id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active" >
+            <a href="index.html" class="nav-link">Главная</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Про нас</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Контакты</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Сервисы</a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown show">
+            <a href="#" class="nav-link btn btn-secondary dropdown-toggle"
+            role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Для персонала
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="Debtor.html">Должники</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ <!--Блок с поиском и добавлением -->
+<div class='container-fluid padding'>
+  <div class="row padding">
+    <!--Поиск -->
+   <div class="col-4">
+    <div class="input-group">
+  <div class="input-group-prepend">
+    <button class="btn btn-success" type="button">Love it</button>
+  </div>
+  <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+    </div>
+   </div>
+   <!--Добавление -->
+  <div class="col-2">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal" data-whatever="@mdo">Создание должника</button>
+      <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="createModalLabel">Создание должника</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Имя</label>
+                  <input type="text" class="form-control" id="debter-firstname">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Фамилия</label>
+                  <input type="text" class="form-control" id="debter-secondname">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Город</label>
+                  <input type="text" class="form-control" id="debter-city">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Номер телефона</label>
+                  <input type="text" class="form-control" id="debter-number">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Сумма долга</label>
+                  <input type="text" class="form-control" id="debter-debt">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+              <button type="button" class="btn btn-primary">Создать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+ </div>
+</div>
+
+
+ <!--Основной блок сайта -->
+<div class="container-fluid padding">
+   <div class="row padding">
+    <!--Таблица должников -->
+     <div class="col-8 margin">
+       <table class="table table-sm table-bordered margin">
+         <thead class="thead-dark">
+           <tr>
+             <th scope="col">#</th>
+             <th scope="col">Имя</th>
+             <th scope="col"> Дата последнего займа</th>
+             <th scope="col">Сумма последнего займа</th>
+             <th scope="col">Общая сумма займа</th>
+             <th scope="col"></th>
+           </tr>
+         </thead>
+         <tbody>
+          <tr>
+             <td scope="row">1</td>
+             <td>Аполлинария Славянск-на-кубани</td>
+             <td>12.10.2020</td>
+             <td>5000</td>
+             <td>25000</td>
+             <td><a href="#">Select</a></td>
+          </tr>
+          <tr>
+            <td scope="row">2</td>
+            <td>Паша Крым</td>
+            <td>22.10.2020</td>
+            <td>6000</td>
+            <td>27000</td>
+            <td><a href="debtor.html">Select</a></td>
+          </tr>
+         </tbody>
+        </table>
+     </div>
+     <div class="col-4 margin">
+       <table class="table table-borderless table-sm margin">
+         <tbody>
+           <tr>
+             <td>A</td>
+             <td>Б</td>
+             <td>В</td>
+             <td>Г</td>
+             <td>Д</td>
+             <td>Е</td>
+           </tr>
+           <tr>
+             <td>Ж</td>
+             <td>З</td>
+             <td>И</td>
+             <td>Й</td>
+             <td>К</td>
+             <td>Л</td>
+           </tr>
+           <tr>
+             <td>М</td>
+             <td>Н</td>
+             <td>О</td>
+             <td>П</td>
+             <td>Р</td>
+             <td>С</td>
+           </tr>
+           <tr>
+             <td>Т</td>
+             <td>У</td>
+             <td>Ф</td>
+             <td>Х</td>
+             <td>Ц</td>
+             <td>Ч</td>
+           </tr>
+           <tr>
+             <td>Ш</td>
+             <td>Щ</td>
+             <td>Э</td>
+             <td>Ю</td>
+             <td>Я</td>
+           </tr>
+         </tbody>
+
+       </table>
+     </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
