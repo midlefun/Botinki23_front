@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, instal-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Верстка сайтов на Bootstrap</title>
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript">
+    function toggle(el)
+    {
+    el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+<!--Шапка сайта -->
+ <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <a href="#" class="navbar-brand"><img src="img/logo.jpg"></a>
+    <button class="navbar-toggler"type="button"
+    data-toggle="collapse"
+    data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse"
+    id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active" >
+            <a href="index.html" class="nav-link">Главная</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Про нас</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Контакты</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Сервисы</a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown show">
+            <a href="#" class="nav-link btn btn-secondary dropdown-toggle"
+            role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Для персонала
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="debtors.html">Должники</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+ </nav>
+   <form class="" action="index.html" method="post">
+  <input type="text" placeholder="Искать здесь...">
+  <button type="submit"></button>
+</form>
+   <div class="row">
+     <div class="col-sm">
+       <div class="p-3">
+         <h2><u>А</u></h2>
+         <a onclick="toggle(document.getElementById('sub-menu1'))">Алина краснодар</a>
+         <ul id="sub-menu1" style="display:none">
+       	<li><a href="#1">Посмотреть историю покупок</a></li>
+       	<li><a href="#2">Посмотреть историю долга</a></li>
+       	<li><a href="#3">подпункт 3</a></li>
+       </ul>
+         <br>
+         <a onclick="toggle(document.getElementById('sub-menu2'))">Анджела Анапа</a>
+         <ul id="sub-menu2" style="display:none">
+       	  <li><a href="#1">Посмотреть историю покупок</a></li>
+       	  <li><a href="#2">Посмотреть историю долга</a></li>
+       	  <li><a href="#3">подпункт 3</a></li>
+         </ul>
+       <br>
+     </div>
+
+      <div class="p-3">
+       <h2><u>Б</u></h2>
+       <a onclick="toggle(document.getElementById('sub-menu3'))">Борис Бронегорск</a>
+       <ul id="sub-menu3" style="display:none">
+         <li><a href="#1">Посмотреть историю покупок</a></li>
+         <li><a href="#2">Посмотреть историю долга</a></li>
+         <li><a href="#3">подпункт 3</a></li>
+       </ul>
+       <br>
+      </div>
+
+     </div>
+     <div class="col-sm">
+       Одна из трёх колонок
+     </div>
+     <div class="col-sm">
+       Одна из трёх колонок
+     </div>
+     <div class="col-sm">
+       Одна из трёх колонок
+     </div>
+   </div>
+
+
+
+
+
+</body>
+</html>
